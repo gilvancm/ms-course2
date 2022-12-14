@@ -1,0 +1,87 @@
+Trocando Zuul api gateway por Springcloud gateway
+8 votos a favor
+Gabriel Augusto Costa · Aula 24 · 1 ano atrás
+Na aula 23 nao consegui levantar a api gateway usando zuul, decedi usar a springcloud.
+segue a configuração do arquivo application.yml (equivalente ao application.properties)
+
+
+server:
+
+  port: 8080
+
+
+
+spring:
+
+  cloud:
+
+    gateway:
+
+      routes:
+
+      - id: hr-payroll
+
+        uri: lb://hr-payroll/payments
+
+        predicates:
+
+        - Path=/payments/**
+
+      - id: hr-worker
+
+        uri: lb://hr-worker/workers
+
+        predicates:
+
+        - Path=/workers/**
+
+  application:
+
+    name: gateway-service
+
+7 respostas
+M
+Maxmiliano
+4 votos a favor
+1 ano atrás
+Outra solução é apenas atualizar o spring-cloud no POM que já está no respositório do professor.
+
+O do professor está com a versão SR8:
+
+
+<properties>
+
+<java.version>11</java.version>
+
+<spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+
+</properties>
+
+Atualize a versão para SR12:
+
+<properties>
+	<java.version>11</java.version>
+	<spring-cloud.version>Hoxton.SR12</spring-cloud.version>
+</properties>
+
+Não esqueça de verificar se a versão do projeto está correta:
+
+<parent> 
+<groupId>org.springframework.boot</groupId>
+ <artifactId>spring-boot-starter-parent</artifactId>
+ <version>2.3.4.RELEASE</version> <relativePath/>
+</parent>  
+WD
+Wellington Mazoni
+0 votos a favor
+1 ano atrás
+Obrigado Maxmiliano, sua dica funcionou para mim. Muito obrigado.
+
+LA
+Lucas da Costa
+0 votos a favor
+11 meses atrás
+Gabriel , não entendi sua resposta . estou com mesmo problema
+
+LC
+Luiz
