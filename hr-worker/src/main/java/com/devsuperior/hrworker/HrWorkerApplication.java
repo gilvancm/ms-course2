@@ -14,6 +14,7 @@ public class HrWorkerApplication {
 	/* anotação acresentei na dependencia Spring Data JPA, H2 Database, 
 	 * Spring Web, EurekaClient é (Eureka Discovery Client)
 	 * adicionei agora a dependencia  Config Client
+	 * biblioteca Ops (Spring Boot Actuator)
 	*/
 	
 }
