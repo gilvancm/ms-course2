@@ -30,7 +30,6 @@ public class WorkerResource {
 	@Value("${test.config}")
 	private String testConfig;
 	
-	
 	//mostra informações caracteristica interna
 	@Autowired
 	private Environment env;
