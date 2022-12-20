@@ -28,7 +28,7 @@ public class UserResource {
 	
 	// EndPoint 2    //o parametro psaamos a interrogação ?email=xxxxx
 		@GetMapping(value = "/search") 
-		public ResponseEntity<User> findById(@RequestParam String email) {
+		public ResponseEntity<User> findByEmail(@RequestParam String email) {
 
 			User obj = usrRepository.findByEmail(email);
 			return ResponseEntity.ok(obj);
