@@ -2,6 +2,12 @@
 #### Nelio Alves 
 https://github.com/acenelio/
 
+https://discord.gg/SbjpsFv
+ajuda geral canal prof nelio
+https://discord.com/channels/727228972068241480/727235890610569226
+
+utilizar essa ferramenta https://www.diffchecker.com/diff para comparar seu código com o do GitHub da aula.
+
 https://www.udemy.com/user/nelio-alves
 
 https://youtube.com/devsuperior
@@ -174,7 +180,28 @@ Atenção: as configurações do bootstrap.properties tem prioridade sobre as do
 Atenção: colocar @RefreshScope em toda classe que possua algum acesso às configurações
 
 ### 3.5 Repositório Git privativo
+Bom dia, como o git recentemente fez modificações em sua segurança via de mão no SSH criou a geração de token, contudo na sua configuração de var no ambiente no lugar do GITHUB_PASS vc coloca o token que vc fez no GIT que irá funcionar. Vale lembrar que na hora de gerar o token no site do GITHUB tem a opção de expiração e fica atento se caso você registrar um período seu projeto pode parar quando expirar. espero ter ajudado, abraços
 
+https://docs.github.com/pt/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+ou
+https://www.google.com/search?q=criar+token+github+de+acceso+personal&oq=criar+token+github+de+&aqs=chrome.6.69i57j33i160l5j33i22i29i30.26707j0j15&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:ce4cac47,vid:yTkb3VtNjBU
+
+
+meu token gerado
+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
+
+
+No seu projeto, ao tentar dar o gitpush será exigido usuário e senha, coloque seu user em seguida o token gerado no passo a passo acima.
+
+# git push
+Username: your_username
+Password: your_token
+Para não precisar ficar digitando toda vez usuário e token, você pode digitar o comando abaixo para guardar as informações em cache
+
+# git config --global credential.helper cache
+
+Um abraço e bons estudos.
+-----------------------------------------------------------------------------
 Atenção: reinicie a IDE depois de adicionar as variáveis de ambiente
 
 # Fase 4: autenticação e autorização
@@ -207,6 +234,7 @@ INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
 ### 4.8 UserFeignClient
 
 ### 4.9 Login e geração do Token JWT
+para teste o token jwt.io
 
 Source -> Override -> configure(AuthenticationManagerBuilder)
 
