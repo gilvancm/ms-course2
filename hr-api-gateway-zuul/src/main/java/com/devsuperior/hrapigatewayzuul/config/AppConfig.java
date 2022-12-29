@@ -1,19 +1,13 @@
-package com.devsuperior.hroauth.config;
+package com.devsuperior.hrapigatewayzuul.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
 @Configuration
 public class AppConfig {
-    //aqui vamos utilizar BCryptPasswordEncoder para criar a criptografia
-	@Bean
-	public BCryptPasswordEncoder bCryptPasswordEncoder() {
-		return new BCryptPasswordEncoder();
-	}
-	
+
 	//vamos criar 2 @Bean componentes para trabalhar com JWT, segurança 
 	//1 componente cria uma chave para o token
 	//criamos este objeto JwtAccessTokenConverter
@@ -32,5 +26,7 @@ public class AppConfig {
 	public JwtTokenStore jwtTokenStore() {
 		return new JwtTokenStore(accessTokenConverter());
 	}
+
+	
 	
 }

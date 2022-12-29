@@ -9,6 +9,8 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 Spring Web
 Spring Clound Discovery - Eureka Discovery Client
 Spring Clound Routing - Zuul[Maintenance]
+mais dependêcia Cloud oauth2
+mais outra dependencia jaxb-impl
 */
 
 @EnableEurekaClient

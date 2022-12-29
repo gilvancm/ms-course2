@@ -243,7 +243,20 @@ Source -> Override -> authenticationManager()
 Basic authorization = "Basic " + Base64.encode(client-id + ":" + client-secret)
 
 ### 4.10 Autorização de recursos pelo gateway Zuul
+adiconar etsá dependencia
 
+<dependency>
+
+    <groupId>com.sun.xml.bind</groupId>
+
+    <artifactId>jaxb-impl</artifactId>
+
+    <version>3.0.2</version>
+
+</dependency>
+
+
+------------------------
 ### 4.11 Deixando o Postman top
 
 Variáveis:
