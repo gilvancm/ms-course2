@@ -1,3 +1,19 @@
+
+Olá Carlos, tudo bem?
+
+Se seguir as mesmas versões utilizadas no curso, você não deve ter problemas em finalizar o curso ok? Mas para título de curiosidade, segue as atualizações de depenências:
+
+Anteriormente --> Hoje
+
+Hystrix --> Resliience4J
+
+Ribbon --> Spring Cloud Load Balancer
+
+Zuul 1 --> Spring Cloud Gateway
+
+Archaius 1 --> Spring Cloud Config
+
+----------------------------------------------------------------
 # Curso Microsserviços Java com Spring Boot e Spring Cloud
 #### Nelio Alves 
 https://github.com/acenelio/
@@ -267,7 +283,12 @@ Variáveis:
 - username: leia@gmail.com
 - password: 123456
 - token: 
+----
+variavel de ambiente no postma no Enviroment(ambiente de execução)
+{{api-gateway}}      {{token}}
 
+{{config-host}} {{token}}
+--
 Script para atribuir token à variável de ambiente do Postman:
 ```js
 if (responseCode.code >= 200 && responseCode.code < 300) {
@@ -276,6 +297,15 @@ if (responseCode.code >= 200 && responseCode.code < 300) {
 }
 ```
 ### 4.12 Configuração de segurança para o servidor de configuração
+/*
+o arquivo de configuração no resitory GitHub de configuração
+para todo os microsservicos, vai ser de todo sistema e não especifico.
+*/
+application.properties
+//coloca neste arquivo
+oauth.client.name=myappname123
+oauth.client.secret=myappsecret123
+jwt.secret=MY-SECRET-KEY    //vc coloca a chave que vc achaar mais seguro -->MY-SECRET-KEY
 
 ### 4.13 Configurando CORS
 

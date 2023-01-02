@@ -22,7 +22,7 @@ public class ResouceServerConfig extends ResourceServerConfigurerAdapter{
 		
 		private static final String[] OPERATOR = { "/hr-worker/**" };
 		
-		private static final String[] ADMIN = { "/hr-payroll/**", "/hr-user/**" };
+		private static final String[] ADMIN = { "/hr-payroll/**", "/hr-user/**", "/actuator/**", "/hr-worker/actuator/**","/hr=oauth/actuator/**"};
 	
 	//clicar com a direita source -> Override imol metodo
 	@Override

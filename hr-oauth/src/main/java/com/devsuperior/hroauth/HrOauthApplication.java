@@ -15,6 +15,8 @@ public class HrOauthApplication {
 	//na criação só 2 dependencia depois crio mais Eureka Discovery Client, Sring Web
 	//adiciona a dependencia Spring Cloud Routing --> OpenFeingh
 	//colocamos Sring Cloud Security -> Clound OAuth2
+	//adicionar dependecia --> Spring Boot Actuator e Config Client
+	
 	public static void main(String[] args) {
 		SpringApplication.run(HrOauthApplication.class, args);
 	}

@@ -11,6 +11,7 @@ Spring Clound Discovery - Eureka Discovery Client
 Spring Clound Routing - Zuul[Maintenance]
 mais dependêcia Cloud oauth2
 mais outra dependencia jaxb-impl
+//adicionar dependecia --> Spring Boot Actuator e Config Client
 */
 
 @EnableEurekaClient

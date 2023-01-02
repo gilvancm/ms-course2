@@ -1,5 +1,6 @@
 package com.devsuperior.hroauth.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -8,7 +9,11 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
 @Configuration
 public class AppConfig {
-    //aqui vamos utilizar BCryptPasswordEncoder para criar a criptografia
+   
+	@Value("${jwt.secret}")
+	private String jwtSecret;
+	
+	//aqui vamos utilizar BCryptPasswordEncoder para criar a criptografia
 	@Bean
 	public BCryptPasswordEncoder bCryptPasswordEncoder() {
 		return new BCryptPasswordEncoder();
@@ -23,7 +28,7 @@ public class AppConfig {
 		JwtAccessTokenConverter tokenConverter = new JwtAccessTokenConverter();
 		    //vamos criar a chave secreta de assinar com o token
 	    	//por enquando vou criar uma chave HadCode, depois vamos pagar do nosso servidor centralizado
-    	tokenConverter.setSigningKey("MY-SECRET-KEY");
+    	tokenConverter.setSigningKey(jwtSecret);
     	return tokenConverter;
 	}
 	
