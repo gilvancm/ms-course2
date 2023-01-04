@@ -348,4 +348,6 @@ Mudando a Branch no Git
 mudar o Git branch main para Docker
 sem alterar o que já tem do curso
 
+criar uma Branch
+git checkout -b docker
 
