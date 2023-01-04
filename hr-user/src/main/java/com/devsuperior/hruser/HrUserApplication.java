@@ -7,6 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+// adicionei agora a dependencia  Config Client
+// biblioteca Ops (Spring Boot Actuator)
+
 @EnableEurekaClient
 @SpringBootApplication
 public class HrUserApplication implements CommandLineRunner{
