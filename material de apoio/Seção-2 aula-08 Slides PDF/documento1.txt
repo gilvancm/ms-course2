@@ -350,4 +350,6 @@ sem alterar o que já tem do curso
 
 criar uma Branch
 git checkout -b docker
-
+git status
+git commit -m "DocKer Start"
+git push -u origem docker    //devido ser o primeiro
