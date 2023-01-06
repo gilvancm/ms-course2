@@ -15,6 +15,7 @@ public class HrWorkerApplication {
 	 * Spring Web, EurekaClient é (Eureka Discovery Client)
 	 * adicionei agora a dependencia  Config Client
 	 * biblioteca Ops (Spring Boot Actuator)
+	 * * adicionei agora a dependencia postgres
 	*/
 	
 }

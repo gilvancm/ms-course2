@@ -9,6 +9,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 // adicionei agora a dependencia  Config Client
 // biblioteca Ops (Spring Boot Actuator)
+//adicionar a dependencia postgres
 
 @EnableEurekaClient
 @SpringBootApplication
