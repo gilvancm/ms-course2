@@ -8,7 +8,9 @@ docker network create hr-net
 ## Testando perfil dev com Postgresql no Docker
 ```
 
-//para lista sua imagem  --->    docker imagem
+//para lista sua imagem  --->    
+docker images
+
 //baixar imagem na sua maquina
 docker pull postgres:12-alpine
 
@@ -17,8 +19,17 @@ docker pull postgres:12-alpine
 //instalar os contenner
 docker run -p 5432:5432 --name hr-worker-pg12 --network hr-net -e POSTGRES_PASSWORD=1234567 -e POSTGRES_DB=db_hr_worker postgres:12-alpine
 
+localhost:5432/db_hr_worker
+
 docker run -p 5432:5432 --name hr-user-pg12 --network hr-net -e POSTGRES_PASSWORD=1234567 -e POSTGRES_DB=db_hr_user postgres:12-alpine
 ```
+//control+c para liberar o contenner 
+//docker ps  para verificar se o contener tá rodando
+//docker ps -a para verificar se o contener tá rodando e os que tão parados
+//ele deu conflito de porta
+//para remover pega o numero do contendo---> docker rm 6090ff63ef8e
+//porta externa(disponibilizar no sistema local),  porta sisponibilizada externa da imegem por padão no postgre 5432
+docker run -p 5433:5432 --name hr-user-pg12 --network hr-net -e POSTGRES_PASSWORD=1234567 -e POSTGRES_DB=db_hr_user postgres:12-alpine
 
 ## hr-config-server
 ```
